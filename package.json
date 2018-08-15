@@ -1,0 +1,18 @@
+{
+  "name": "mercury-gql",
+  "version": "0.0.1",
+  "description": "GraphQL schema for Mercury profiles",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wigy <wigy_opensource_developer@yahoo.com>",
+  "license": "LGPL-3.0-or-later",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "graphql-import": "^0.6.0",
+    "graphql-tools": "^3.1.1"
+  }
+}

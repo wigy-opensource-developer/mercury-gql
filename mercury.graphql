@@ -1,0 +1,40 @@
+scalar Hash
+scalar PublicKey
+
+enum Network {
+    IPV4
+    IPV6
+    TOR
+    I2P
+}
+
+type Endpoint {
+    network: Network!
+    address: String
+}
+
+interface IProfile {
+    id: Hash!
+    pk: PublicKey!
+}
+
+type Persona implements IProfile {
+    id: Hash!
+    pk: PublicKey!
+    homes: [Hash!]!
+}
+
+type HomeNode implements IProfile {
+    id: Hash!
+    pk: PublicKey!
+    endpoints: [Endpoint!]!
+}
+
+type Application implements IProfile {
+    id: Hash!
+    pk: PublicKey!
+}
+
+type Query {
+    profiles: [IProfile!]!
+}
